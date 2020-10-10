@@ -5,12 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>原生 JavaScript 插入组件展示页面</title>
     <link rel="stylesheet" href="./style/native_style.css">
+    <style>
+        /* 参考样式，供效果查看可以取消 */
+        body{
+            background-color: aliceblue;
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
     <script src="./js/native_js.js"></script>
     <script>
+        // 组件基础数据结构
+        const data = {
+            renderId:{
+                editButtonId:'button_xjse93x',
+                preserveButtonId:'button_xshe91s',
+                addClikcId:'clickLink_euw36a',
+                delClickId:'clickLink_epw16z',
+                wrapperId:'app'
+            },
+            editor:false,
+            dataList:[
+                {
+                    value:'一级分类一',
+                    children:[
+                        {value:'一二级菜单'},
+                        {value:'一二级菜单'},
+                        {value:'一二级菜单'},
+                        {value:'一二级菜单'}
+                    ]
+                }, {
+                    value:'一级分类二',
+                    children:[
+                        {value:'2 二级菜单'},
+                        {value:'2 二级菜单'},
+                        {value:'2 二级菜单'}
+                    ]
+                }
+            ]
+        };
         // 调用文件渲染组件
+        renderSubmenuTemp (data);
     </script>
 </body>
 </html>
